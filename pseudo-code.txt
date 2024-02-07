@@ -1,0 +1,16 @@
+Header
+[1] Title, [2] nav, [3] basket
+H1, font, font-size, logo(svg)
+Centered, evenly spaced, clickable buttons that open menus in #main
+Clickable button, hover animation, opens basket in #main
+Main
+[1] Loading screen, [2] landing page, [3] categories, [4] products,
+Div, rounded to circle, border:grey, top-border:blue, animation:rotating
+Selection with sale, cards, sale stickers position to corner of cards, happy customers showcase
+Cards with categories
+Cards with products
+Footer
+[1] Contact, [2] map, [3] easter egg
+Phone-number, e-mail-address
+Address, Google-maps
+Secret clickable button
