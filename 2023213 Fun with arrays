@@ -1,0 +1,54 @@
+1. pop: Fjerner det sidste element fra et array og returnerer det. Dette reducerer længden af arrayet med 1. For eksempel:
+
+    const fruits = ['æble', 'banan', 'appelsin'];
+    const removedFruit = fruits.pop();
+    console.log('Fjernet frugt:', removedFruit); // Output: Fjernet frugt: appelsin
+    console.log('Opdateret array:', fruits); // Output: Opdateret array: ['æble', 'banan']
+    
+
+2. push: Tilføjer et eller flere elementer til slutningen af et array og returnerer den nye længde af arrayet. For eksempel:
+
+    const numbers = [1, 2, 3];
+    const newLength = numbers.push(4, 5);
+    console.log('Nyt array:', numbers); // Output: Nyt array: [1, 2, 3, 4, 5]
+    console.log('Ny længde:', newLength); // Output: Ny længde: 5
+    
+
+3. shift: Fjerner det første element fra et array og returnerer det. Dette reducerer også længden af arrayet med 1. For eksempel:
+
+    const colors = ['rød', 'blå', 'grøn'];
+    const removedColor = colors.shift();
+    console.log('Fjernet farve:', removedColor); // Output: Fjernet farve: rød
+    console.log('Opdateret array:', colors); // Output: Opdateret array: ['blå', 'grøn']
+    
+
+4. unshift: Tilføjer et eller flere elementer til starten af et array og returnerer den nye længde af arrayet. For eksempel:
+
+    const animals = ['kat', 'hund'];
+    const newLength = animals.unshift('fugl', 'fisk');
+    console.log('Nyt array:', animals); // Output: Nyt array: ['fugl', 'fisk', 'kat', 'hund']
+    console.log('Ny længde:', newLength); // Output: Ny længde: 4
+    
+
+5. slice: Returnerer en kopi af et delarray fra et array. Du kan angive start- og slutindeks for at vælge de ønskede elementer. For eksempel:
+
+    const letters = ['a', 'b', 'c', 'd', 'e'];
+    const subArray = letters.slice(1, 4);
+    console.log('Delarray:', subArray); // Output: Delarray: ['b', 'c', 'd']
+
+
+6. forEach: Kører en funktion for hvert element i et array. Dette er nyttigt til at udføre en handling på hvert element uden at skulle skrive en løkke manuelt. For eksempel:
+
+    const numbers = [1, 2, 3, 4];
+    numbers.forEach((number) => {
+      console.log(number * 2); // Output: 2, 4, 6, 8
+    });
+
+
+
+Kildeliste:
+(1) Guidelines and examples of array formulas - Microsoft Support. https://support.microsoft.com/en-us/office/guidelines-and-examples-of-array-formulas-7d94a64e-3ff3-4686-9372-ecfd5caa57c7.
+(2) Array funktioner i Excel - Computer Viden. http://www.computerdk.com/software/microsoft-access/136999.html.
+(3) Lær alt om array-funktioner i Excel… på kun 3 timer! - Proximo. https://proximo.dk/kursus-array-funktioner/.
+(4) Array formulas and functions in Excel - examples and guidelines - Ablebits. https://www.ablebits.com/office-addins-blog/array-formulas-functions-excel/.
+(5) PHP: Array Functions - Manual. https://www.php.net/manual/en/ref.array.php.
