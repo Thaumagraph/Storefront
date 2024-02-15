@@ -34,7 +34,7 @@
 
     const letters = ['a', 'b', 'c', 'd', 'e'];
     const subArray = letters.slice(1, 4);
-    console.log('Delarray:', subArray); // Output: Delarray: ['b', 'c', 'd']
+    console.log('Subarray:', subArray); // Output: Delarray: ['b', 'c', 'd']
 
 
 6. forEach: Kører en funktion for hvert element i et array. Dette er nyttigt til at udføre en handling på hvert element uden at skulle skrive en løkke manuelt. For eksempel:
