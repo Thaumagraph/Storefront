@@ -39,7 +39,7 @@ function ProductReceived(productData) {
   let myFeaturedProducts = [];
 
   myFeaturedProducts.push(
-    myProducts[1],
+    myProducts[28],
     myProducts[2],
     myProducts[3],
     myProducts[4],
@@ -85,7 +85,9 @@ function buildProuctCard(myFeaturedProducts) {
   myFeaturedProducts.forEach((product) => {
     let productCard = `
     <figure class="product-card" onclick="buildProductDetails(${product.id})">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"
+    onclick="playAudio('cash-register-kaching-sound-effect-125042.mp3')"
+    >
     </a>
     <span class="discountPercentage">
          <div class="star">
@@ -117,4 +119,33 @@ function buildProuctCard(myFeaturedProducts) {
   });
 }
 
-function rickRoll() {}
+// Set the target time for the countdown (1 hour, 37 minutes, and 50 seconds from now)
+var countdownDate = new Date();
+countdownDate.setHours(countdownDate.getHours() + 1);
+countdownDate.setMinutes(countdownDate.getMinutes() + 37);
+countdownDate.setSeconds(countdownDate.getSeconds() + 50);
+
+// Update the countdown every second
+var countdownTimer = setInterval(function () {
+  var now = new Date().getTime();
+  var distance = countdownDate - now;
+
+  // Calculate remaining time
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the countdown
+  document.getElementById("countdown").innerHTML =
+    hours + "h " + minutes + "m " + seconds + "s ";
+
+  // If the countdown is over, display a message
+  if (distance < 0) {
+    clearInterval(countdownTimer);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+function playAudio(url) {
+  new Audio(url).play();
+}

@@ -1,3 +1,7 @@
+@media (max-width: 1700px) {
+  font-size: 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +10,7 @@
 }
 
 body {
+  position: relative;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -14,21 +19,56 @@ body {
 
 /* #region HEADER */
 body > header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0.1vw 0.3vw black;
+  background: #5ce1fe;
+  background: linear-gradient(180deg, #87e9ff 0%, #23505e 100%);
 }
 
 h1 {
   color: #f9f9f9;
   text-shadow: 0vw 0.1vw 0.3vw #000000;
 }
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  filter: invert();
+  padding: 1vw;
+  width: 13vw;
+}
+
 /* #region NAV */
+nav {
+  padding: 1vw;
+}
 nav ul,
 nav ul li,
 nav ul li a {
   display: flex;
   justify-content: space-around;
-  color: #f9f9f9;
+  color: #23505e;
   list-style: none;
   text-decoration: none;
+}
+
+nav ul li {
+  transition: 0.1s;
+  border-radius: 1000px;
+  background-color: #ffffff;
+  padding: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+
+nav ul li:hover {
+  scale: 1.15;
+  transition: 0.1s;
 }
 /* #endregion */
 
@@ -36,9 +76,8 @@ nav ul li a {
 
 /* #region MAIN */
 main {
-  display: flex;
-  justify-content: center;
   width: 100%;
+  /* height: 60vw; */
 }
 /* #region PREVIEW */
 .preview {
@@ -54,6 +93,11 @@ main {
   margin: 1%;
   width: 100%;
   height: 17vw;
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
 }
 
 .product-card {
@@ -91,6 +135,7 @@ main {
   height: 225px;
   overflow-y: hidden;
 }
+
 .img-container img {
   width: 100%;
   height: auto;
@@ -118,15 +163,15 @@ main {
 }
 
 .product-card .discountPercentage {
-  text-align: center;
   color: #f9f9f9;
+  text-align: center;
 }
 
 .product-card .star {
   display: flex;
   position: absolute;
-  left: -1vw;
   top: -1vw;
+  left: -1vw;
   justify-content: center;
   align-items: center;
   background-image: url(image_2024-02-16_090515971_cleanup-removebg-preview.png);
@@ -152,8 +197,8 @@ main {
   position: absolute;
   bottom: 0;
   grid-template-columns: 2fr 1fr 1fr;
-  text-align: center;
   gap: 10%;
+  text-align: center;
 }
 
 .product-card footer * {
@@ -162,20 +207,32 @@ main {
 
 .product-card .price {
   margin: 0.3vw;
-  padding: 0.5vw;
-  background-color: #92e024;
-  border-radius: 1000px;
-  color: #ffffff;
-  text-shadow: 0 0.1vw 0.3vw black;
   box-shadow: 0 0.1vw 0.3vw black;
+  border-radius: 1000px;
+  background-color: #ffea00;
+  padding: 0.5vw;
+  color: #000000;
+  text-shadow: 0 0.1vw 0.3vw rgb(255, 255, 255);
 }
 /* #endregion */
 
 /* #endregion */
 
 /* #region FOOTER */
-footer {
+body > footer {
+  display: grid;
+  bottom: 0;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 0.1vw 0.3vw black;
+  background: rgb(92, 225, 254);
+  background: linear-gradient(
+    180deg,
+    rgb(135, 233, 255) 0%,
+    rgb(35, 80, 94) 100%
+  );
+  padding: 1vw;
 }
+
 /* #endregion */
 
 /* #region ANIMATIONS*/
@@ -192,3 +249,95 @@ footer {
   }
 }
 /* #endregion */
+
+.banner {
+  box-shadow: 0 0.1vw 1vw black;
+  background: rgb(255, 229, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 229, 0, 1) 0%,
+    rgb(145, 111, 0) 100%
+  );
+  padding: 3vw;
+  width: 100%;
+  height: 5vw;
+  text-align: center;
+}
+
+#countdown {
+  font-weight: bolder;
+  font-size: 3em;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 15vw 10vw 15vw 10vw;
+}
+
+section article {
+  box-shadow: 0 0.3vw 1vw black;
+  border-radius: 3vw;
+  background: rgb(92, 225, 254);
+  background: linear-gradient(
+    180deg,
+    rgb(135, 233, 255) 0%,
+    rgb(35, 80, 94) 100%
+  );
+  padding: 3em;
+  color: #ffffff;
+}
+
+section img {
+}
+
+article h2 {
+  font-size: 3em;
+}
+
+article p {
+  font-size: 2.5em;
+}
+
+.map iframe {
+  width: 30%;
+  height: auto;
+}
+
+video {
+  background-color: #000000;
+  width: 100%;
+  height: 30vw;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  background: #acacac;
+  background: radial-gradient(circle, #cecece 0%, #acacac 100%);
+}
+
+::-webkit-scrollbar-track {
+  transition: 0.5s;
+  border: none;
+  border-radius: 0;
+  background-color: #ffffff00;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  transition: 0.5s;
+  background: rgb(135, 233, 255);
+  background: radial-gradient(circle, #87e9ff 50%, #acacac 100%);
+}
