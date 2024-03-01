@@ -39,7 +39,7 @@ function ProductReceived(productData) {
   let myFeaturedProducts = [];
 
   myFeaturedProducts.push(
-    myProducts[28],
+    myProducts[1],
     myProducts[2],
     myProducts[3],
     myProducts[4],
@@ -149,3 +149,96 @@ var countdownTimer = setInterval(function () {
 function playAudio(url) {
   new Audio(url).play();
 }
+
+// categories
+let myCategories = [
+  "smartphones",
+  "laptops",
+  "fragrances",
+  "skincare",
+  "groceries",
+  "home-decoration",
+  "furniture",
+  "tops",
+  "womens-dresses",
+  "womens-shoes",
+  "mens-shirts",
+  "mens-shoes",
+  "mens-watches",
+  "womens-watches",
+  "womens-bags",
+  "womens-jewellery",
+  "sunglasses",
+  "automotive",
+  "motorcycle",
+  "lighting",
+];
+
+// // // let myCategory = myCategories[8];
+
+// Hovedkategorier
+let myElectronics = [];
+let myWomensClothing = [];
+let myMensClothing = [];
+
+myCategories.forEach((category) => {
+  switch (category) {
+    case "smartphones":
+    case "laptops":
+    case "lighting":
+      console.log("Electronics");
+      myElectronics.push(category);
+      break;
+
+    case "fragrances":
+    case "skincare":
+      console.log("Cosmetics");
+      myElectronics.push(category);
+
+      break;
+
+    case "groceries":
+      console.log("Everyday items");
+      myElectronics.push(category);
+
+      break;
+
+    default:
+      console.log("misc.");
+      break;
+
+    case "home-decoration":
+    case "furniture":
+    case "lighting":
+      console.log("Home");
+      myElectronics.push(category);
+
+      break;
+
+    case "tops":
+    case "womens-dresses":
+    case "womens-shoes":
+    case "mens-shirts":
+    case "mens-shoes":
+      console.log("Appearals");
+      myElectronics.push(category);
+
+      break;
+
+    case "womens-dresses":
+    case "womens-shoes":
+      console.log("Women's clothes");
+      myWomensClothing.push(category);
+
+      break;
+
+    case "mens-shirts":
+    case "mens-shoes":
+      console.log("Men's clothes");
+      myMensClothing.push(category);
+
+      break;
+  }
+});
+
+console.log(smartphones);
